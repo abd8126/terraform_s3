@@ -1,4 +1,9 @@
-resource "aws_s3_bucket" "onebucket" {
-   bucket = "testing-s3-with-terraform-week4"
-   acl = "private"
+resource "aws_s3_bucket" "b" {
+  bucket = "my-tf-test-bucket-week4b-bucket"
+  acl    = "private"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
 }
